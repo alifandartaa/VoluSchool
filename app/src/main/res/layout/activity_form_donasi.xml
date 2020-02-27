@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".activities.FormDonasiActivity">
+
+    <TextView
+        android:id="@+id/tv_metode_pembayaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/metode_pembayaran"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"/>
+
+    <Spinner
+        android:id="@+id/sp_metode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:entries="@array/bank_arrays"/>
+
+    <TextView
+        android:id="@+id/tv_nominal_donasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nominal_donasi"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/montserrat"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/et_nominal_donasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/tv_sembunyikan_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sembunyikan_nama"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/montserrat"
+        android:textSize="16sp"/>
+
+    <CheckBox
+        android:id="@+id/cb_sembunyikan_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:text="@string/sembunyikan"/>
+
+    <Button
+        android:id="@+id/btn_submit_donasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/donasi_sekarang"
+        android:background="@drawable/bg_btn_style"
+        android:textColor="#FFFF"
+        android:fontFamily="@font/montserrat"
+        android:textSize="16sp"
+        android:layout_marginTop="400dp"/>
+
+</LinearLayout>

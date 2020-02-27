@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cv_history">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:padding="8dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_img_donatur"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="22dp"
+            android:outlineAmbientShadowColor="@color/colorBlack"
+            android:background="@drawable/ic_person_outline_black_24dp"
+            tools:targetApi="p" />
+        <TextView
+            android:id="@+id/tv_donatur_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toEndOf="@id/iv_img_donatur"
+            android:fontFamily="@font/montserrat"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:text="@string/donatur_name" />
+        <TextView
+            android:id="@+id/tv_donatur_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_donatur_name"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/montserrat"
+            android:textSize="14sp"
+            android:layout_toEndOf="@id/iv_img_donatur"
+            tools:text="@string/cost_donation" />
+        <TextView
+            android:id="@+id/tv_donatur_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toEndOf="@id/tv_donatur_cost"
+            android:layout_below="@id/tv_donatur_name"
+            android:layout_alignParentEnd="true"
+            android:textSize="14sp"
+            android:gravity="right"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:fontFamily="@font/montserrat"
+            tools:text="@string/date_donation" />
+
+        <View
+            android:id="@+id/line_3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="16dp"
+            android:layout_below="@id/iv_img_donatur"
+            android:background="#c0c0c0"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

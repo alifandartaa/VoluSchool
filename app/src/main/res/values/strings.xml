@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">VoluSchool</string>
+    <string name="login">LOGIN</string>
+    <string name="hello">Hello</string>
+    <string name="string_fill_data_login">Please fill in the following data to enter</string>
+    <string name="string_uname_login">Username</string>
+    <string name="string_email_login">Email</string>
+    <string name="string_passwd_login">Password</string>
+    <string name="string_dont_have">Don\'t have an account yet</string>
+    <string name="register">Register</string>
+    <string name="hint_register">Fill in the following data</string>
+    <string name="string_name_register">Nama</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="title_home">Home</string>
+    <string name="title_history">History</string>
+    <string name="title_add">New</string>
+    <string name="title_inbox">Inbox</string>
+    <string name="title_profile">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cost_donation">Cost Donation</string>
+    <string name="donation_name">Donation Name</string>
+    <string name="date_donation">Date Donation</string>
+    <string name="image_school">Image School</string>
+    <string name="sd_mburing">SD Mburing</string>
+    <string name="donate">DONATE</string>
+    <string name="saldo">Saldo</string>
+    <string name="history_message">History Message</string>
+    <string name="inbox_message">Message Inbox</string>
+    <string name="value_cost_saldo">Rp 1000000</string>
+    <string name="no_hp">No Hp</string>
+    <string name="example_nohp">081217915595</string>
+    <string name="no_ktp">No KTP</string>
+    <string name="string_invite_volu">Yuk jadi volunteer !</string>
+    <string name="invite_donate">Bantu siapa hari ini ?</string>
+    <string name="no_rekening">No Rekening</string>
+    <string name="example_norek">9094256</string>
+    <string name="keluar">Keluar</string>
+    <string name="example_ktp">1371016902570005</string>
+    <string name="image_detail_school">Image Detail School</string>
+    <string name="school_name">School Name</string>
+    <string name="example_cost">Rp. 2000.0000</string>
+    <string name="tv_terkumpul">Terkumpul dari Rp.</string>
+    <string name="tv_story_detail">Sekolah ini letaknya berada di pelosok desa. Mungkin perlu 1 jam untuk akses ke tempat nya yang berjarak kurang lebih 10 km. Sekolah ini secara fisik sudah lama dan sebaiknya ada renovasi agar lebih layak dan memadai</string>
+    <string name="cerita">Cerita</string>
+    <string name="company_name">Company Name</string>
+    <string name="donatur">Donatur</string>
+    <string name="metode_pembayaran">Metode Pembayaran</string>
+    <string name="nominal_donasi">Nominal Donasi</string>
+    <string name="donasi_sekarang">Donasi Sekarang</string>
+    <string name="gabung_sekarang">Gabung Sekarang</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="pekerjaan">Pekerjaan</string>
+    <string name="upload_cv">Upload CV</string>
+    <string name="terkumpul">Terkumpul</string>
+    <string name="tv_value_rp">Rp. </string>
+    <string name="tab_text_1">Donation</string>
+    <string name="tab_text_2">Volunteer</string>
+    <string name="upload">Upload</string>
+    <string name="buat_donasi">Buat Donasi</string>
+    <string name="cari_volunteer">Cari Volunteer</string>
+    <string name="fasilitas_yang_dibutuhkan">Fasilitas yang dibutuhkan</string>
+    <string name="donatur_name">Donatur Name</string>
+    <string name="detail_pembayaran">Detail Pembayaran</string>
+    <string name="sembunyikan_nama">Sembunyikan Nama</string>
+    <string name="sembunyikan">Sembunyikan</string>
+    <string name="upload_berhasil">Upload Berhasil</string>
+    <string name="voluschool">Voluschool</string>
+    <string name="masuk">MASUK</string>
+    <string name="halo">Halo</string>
+    <string name="silahkan_isi_data_berikut">Silahkan isi data berikut</string>
+    <string name="daftar">Daftar</string>
+    <string name="password">Password</string>
+    <string name="nomor_hp">Nomor HP</string>
+    <string name="nomor_ktp">Nomor KTP</string>
+    <string name="upload_ktp">Upload KTP</string>
+    <string name="image_promotion">Image Promotion</string>
+    <string name="nama_sekolah">Nama Sekolah</string>
+    <string name="deskripsi_sekolah">Deskripsi Sekolah</string>
+    <string name="target_dana">Target Dana</string>
+    <string name="lokasi_sekolah">Lokasi Sekolah</string>
+    <string name="kriteria_volunteer">Kriteria Volunteer</string>
+    <string name="jumlah_volunteer">Jumlah Volunteer</string>
+    <string name="loading">Loading...</string>
+
+    <string-array name="bank_arrays">
+        <item>BCA</item>
+        <item>BNI</item>
+        <item>Mandiri</item>
+        <item>BRI</item>
+    </string-array>
+</resources>

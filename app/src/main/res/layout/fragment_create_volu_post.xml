@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".fragments.CreateVoluPostFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_crvolu_nameschool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nama_sekolah"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/et_crvolu_nameschool"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/tv_crvolue_descschool"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deskripsi_sekolah"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/et_crvolue_descschool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:lines="2"
+            android:inputType="textMultiLine"/>
+
+        <TextView
+            android:id="@+id/tv_crvolue_locschool"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lokasi_sekolah"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/et_crvolue_locschool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:lines="2"
+            android:inputType="textMultiLine" />
+
+        <TextView
+            android:id="@+id/tv_crvolue_critvol"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kriteria_volunteer"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/et_crvolue_critvol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:lines="3"
+            android:inputType="textMultiLine"/>
+
+        <TextView
+            android:id="@+id/tv_crvolue_totvol"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jumlah_volunteer"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/et_crvolue__totvol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/btn_upimg_vol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="200dp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="#FFFF"
+            android:background="@drawable/bg_btn_style"
+            android:textSize="16sp"
+            android:text="@string/upload" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_create_vol"
+        android:background="@drawable/bg_btn_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cari_volunteer"
+        android:layout_gravity="bottom|center_horizontal"
+        android:textColor="#FFFF"
+        android:fontFamily="@font/montserrat"/>
+
+</FrameLayout>

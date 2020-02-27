@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fg_create_donate"
+    android:padding="16dp"
+    tools:context=".fragments.CreateDonatPostFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_crname_school"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nama_sekolah"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/et_crname_school"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/tv_crdesc_school"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deskripsi_sekolah"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/et_crdesc_school"
+            android:layout_width="match_parent"
+            android:lines="3"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:scrollbars="vertical"/>
+
+        <TextView
+            android:id="@+id/tv_crfac_school"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fasilitas_yang_dibutuhkan"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/et_crfac_school"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:lines="3" />
+
+        <TextView
+            android:id="@+id/tv_crcost_school"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/target_dana"
+            android:inputType="number"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/et_crcost_school"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/btn_upimg_don"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="200dp"
+            android:fontFamily="@font/montserrat"
+            android:background="@drawable/bg_btn_style"
+            android:textColor="#FFFF"
+            android:textSize="16sp"
+            android:text="@string/upload" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_create_donat"
+        android:background="@drawable/bg_btn_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="@string/buat_donasi"
+        android:textSize="16sp"
+        android:textColor="#FFFF"
+        android:fontFamily="@font/montserrat"/>
+
+</FrameLayout>

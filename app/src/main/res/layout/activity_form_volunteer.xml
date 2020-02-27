@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".activities.FormDonasiActivity">
+
+    <TextView
+        android:id="@+id/tv_nama_lengkap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nama_lengkap"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:id="@+id/et_nama_lengkap"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:inputType="text"
+        />
+
+    <TextView
+        android:id="@+id/tv_pekerjaan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pekerjaan"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:id="@+id/et_pekerjaan"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:inputType="text"
+        />
+
+    <TextView
+        android:id="@+id/tv_pengalaman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pengalaman"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:id="@+id/et_pengalaman"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:inputType="text"
+        />
+
+    <Button
+        android:id="@+id/btn_upload_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/upload_cv"/>
+
+    <Button
+        android:id="@+id/btn_submit_volunteer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gabung_sekarang"
+        android:background="@color/primaryOrange"
+        android:layout_marginTop="410dp"/>
+
+
+</LinearLayout>

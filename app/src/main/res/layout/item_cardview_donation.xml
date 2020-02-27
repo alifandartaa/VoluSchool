@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cv_donate"
+    card_view:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="8dp">
+        <ImageView
+            android:id="@+id/iv_img_donate"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@drawable/img_sd_mburing"/>
+        <TextView
+            android:id="@+id/tv_school_donate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/montserrat"
+            android:layout_toEndOf="@id/iv_img_donate"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            tools:text="@string/school_name" />
+
+        <TextView
+            android:id="@+id/tv_saved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_below="@id/tv_school_donate"
+            android:layout_toEndOf="@id/iv_img_donate"
+            android:fontFamily="@font/montserrat"
+            android:textSize="14sp"
+            android:text="@string/terkumpul" />
+
+        <TextView
+            android:id="@+id/tv_cost_donate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/montserrat"
+            android:layout_below="@id/tv_saved"
+            android:layout_toEndOf="@id/iv_img_donate"
+            android:textSize="14sp"
+            android:text="@string/tv_value_rp" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
