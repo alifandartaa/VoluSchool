@@ -35,7 +35,7 @@
         android:id="@+id/tv_detschool_cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/example_cost"
+        android:text="@string/tv_value_rp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:textSize="16sp"
@@ -85,7 +85,7 @@
             android:layout_height="35dp"
             android:layout_marginTop="7dp"
             android:layout_marginStart="8dp"
-            android:background="@color/primaryOrange"/>
+            android:src="@drawable/img_bcc_filkom"/>
 
         <TextView
             android:id="@+id/tv_detail_company"
@@ -109,6 +109,7 @@
         android:layout_below="@id/cv_company"
         android:layout_marginBottom="6dp"
         android:layout_marginTop="8dp"
+        android:textColor="@color/primaryOrange"
         android:layout_marginHorizontal="16dp"
         android:text="@string/cerita"
         tools:targetApi="o" />
@@ -146,6 +147,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="6dp"
         android:layout_marginHorizontal="16dp"
+        android:textColor="@color/primaryOrange"
         android:text="@string/fasilitas_yang_dibutuhkan"
         tools:targetApi="o" />
 
@@ -182,6 +184,7 @@
         android:layout_below="@id/cv_fasilitas"
         android:layout_marginBottom="6dp"
         android:layout_marginTop="8dp"
+        android:textColor="@color/primaryOrange"
         android:layout_marginHorizontal="16dp"
         android:text="@string/donatur"
         tools:targetApi="o" />

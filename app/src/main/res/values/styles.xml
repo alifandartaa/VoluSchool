@@ -14,5 +14,12 @@
         <item name="colorControlHighlight">#f44336</item>
     </style>
 
+    <style name="string_profile">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
 
 </resources>

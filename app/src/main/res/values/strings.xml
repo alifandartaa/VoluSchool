@@ -53,7 +53,7 @@
     <string name="nama_lengkap">Nama Lengkap</string>
     <string name="pekerjaan">Pekerjaan</string>
     <string name="upload_cv">Upload CV</string>
-    <string name="terkumpul">Terkumpul</string>
+    <string name="terkumpul">Terkumpul </string>
     <string name="tv_value_rp">Rp. </string>
     <string name="tab_text_1">Donation</string>
     <string name="tab_text_2">Volunteer</string>
@@ -83,6 +83,21 @@
     <string name="kriteria_volunteer">Kriteria Volunteer</string>
     <string name="jumlah_volunteer">Jumlah Volunteer</string>
     <string name="loading">Loading...</string>
+    <string name="target_total">Target total</string>
+    <string name="submit_donasi">Donasi</string>
+    <string name="message_alert">Apa kamu sudah yakin?</string>
+    <string name="alert_confirm_positive">Ya</string>
+    <string name="result_donasi">Terima kasih telah berdonasi</string>
+    <string name="alert_confirm_negative">Tidak</string>
+    <string name="nama">Nama</string>
+    <string name="alif_andarta_al_falah">Alif Andarta Al Falah</string>
+    <string name="tv_story_volunteer">Tenaga kerja guru di sekolah ini sangatlah minim. Hal tersebut dikarenakan kurang akses untuk menuju tempat tersebut sangat sulit</string>
+    <string name="example_detvol_lokasi">Lokasi sekolah ini terdapat di Jl Niwen Sidorahayu Wagir Kabupaten Malang</string>
+    <string name="example_detvol_kriteria">Kami membutuhkan volunteer yang mau mengabdi selama 5 hari tiap minggunya. Dari jam 7 pagi hingga jam 12 siang. Kami sangat menghargai volunteer yang pandai berbahasa Inggris</string>
+    <string name="kriteria">Kriteria yang dibutuhkan</string>
+    <string name="target_jumlah_orang">Target jumlah orang </string>
+    <string name="volunteer">Volunteer</string>
+    <string name="result_joinvol">Terima kasih telah bergabung</string>
 
     <string-array name="bank_arrays">
         <item>BCA</item>

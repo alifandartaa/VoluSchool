@@ -24,6 +24,7 @@ import com.example.voluschool.model.PostVolunteer;
 import java.util.ArrayList;
 
 import static com.example.voluschool.activities.DetailDonationActivity.EXTRA_DONATION;
+import static com.example.voluschool.activities.DetailVolunteerActivity.EXTRA_VOLUNTEER;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -52,9 +53,22 @@ public class VolunteerFragment extends Fragment {
 //        progressBar = view.findViewById(R.id.pb_donate);
         RecyclerView rvVolunteer = view.findViewById(R.id.rv_volunteer);
 
-        PostVolunteer postVolunteer1 = new PostVolunteer("1","SD Tulusayu", 10, "Tenaga kerja guru di sekolah ini sangatlah minim. Hal tersebut dikarenakan kurang akses untuk menuju tempat tersebut sangat sulit", "BCC", R.drawable.img_sd_tulusayu );
-        PostVolunteer postVolunteer2 = new PostVolunteer("2", "SD Bakalan", 5, "Tenaga kerja guru di sekolah ini sangatlah minim. Hal tersebut dikarenakan kurang akses untuk menuju tempat tersebut sangat sulit", "BCC", R.drawable.img_sd_bakalan);
-        PostVolunteer postVolunteer3 = new PostVolunteer("3", "SD Bandulan", 7, "Tenaga kerja guru di sekolah ini sangatlah minim. Hal tersebut dikarenakan kurang akses untuk menuju tempat tersebut sangat sulit", "BCC", R.drawable.img_sd_bandulan);
+//        private int id;
+//        private String schoolName;
+//        private int registeredPeople;
+//        private int totalPeople;
+//        private String story;
+//        private String location;
+//        private String criteria;
+//        private String company;
+//        private int schoolImage;
+
+        PostVolunteer postVolunteer1 = new PostVolunteer("SD Tulusayu", 3, 10, "Tenaga kerja guru di sekolah ini sangatlah minim. Hal tersebut dikarenakan kurang akses untuk menuju tempat tersebut sangat sulit",
+                getResources().getString(R.string.example_detvol_lokasi), "Jago Nge pool","BCC", R.drawable.img_sd_tulusayu );
+        PostVolunteer postVolunteer2 = new PostVolunteer( "SD Bakalan", 4, 9,"Tenaga kerja guru di sekolah ini sangatlah minim. Hal tersebut dikarenakan kurang akses untuk menuju tempat tersebut sangat sulit",
+                getResources().getString(R.string.example_detvol_lokasi), "Jago Nge pool","BCC", R.drawable.img_sd_bakalan);
+        PostVolunteer postVolunteer3 = new PostVolunteer( "SD Bandulan", 5,8, "Tenaga kerja guru di sekolah ini sangatlah minim. Hal tersebut dikarenakan kurang akses untuk menuju tempat tersebut sangat sulit",
+                getResources().getString(R.string.example_detvol_lokasi), "Jago Nge pool","BCC", R.drawable.img_sd_bandulan);
         postVolunteers.add(postVolunteer1);
         postVolunteers.add(postVolunteer2);
         postVolunteers.add(postVolunteer3);
@@ -74,7 +88,7 @@ public class VolunteerFragment extends Fragment {
 
     private void showSelectedData(PostVolunteer postVolunteer) {
         Intent intent = new Intent(getActivity(), DetailVolunteerActivity.class);
-        intent.putExtra(EXTRA_DONATION, postVolunteer);
+        intent.putExtra(EXTRA_VOLUNTEER, postVolunteer);
         startActivity(intent);
     }
 }

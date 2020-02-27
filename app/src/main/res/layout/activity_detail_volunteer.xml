@@ -1,9 +1,216 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activities.DetailVolunteerActivity">
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_detvol_school"
+            android:layout_width="match_parent"
+            android:src="@drawable/img_sd_mburing"
+            android:scaleType="center"
+            android:layout_height="200dp"
+            android:contentDescription="@string/image_detail_school" />
+
+        <TextView
+            android:id="@+id/tv_detvol_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/school_name"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:textSize="24sp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/montserrat"
+            android:textStyle="bold"
+            android:layout_below="@id/iv_detvol_school"/>
+
+        <TextView
+            android:id="@+id/tv_detvol_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/terkumpul"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/montserrat"
+            android:layout_below="@id/tv_detvol_name"/>
+
+        <TextView
+            android:id="@+id/tv_detvol_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/target_jumlah_orang"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/montserrat"
+            android:layout_below="@id/tv_detvol_name"
+            android:layout_toEndOf="@id/tv_detvol_people"/>
+
+        <Button
+            android:id="@+id/btn_detail_donate"
+            android:background="@drawable/bg_btn_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gabung_sekarang"
+            android:textSize="16sp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="#FFFF"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@id/tv_detvol_people"
+            tools:targetApi="o" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_company"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/primaryOrange"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="4dp"
+            android:layout_below="@id/btn_detail_donate"
+            tools:targetApi="o">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/img_bcc_filkom"/>
+
+            <TextView
+                android:id="@+id/tv_detvol_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/company_name"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorBlack"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_story"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat"
+            android:layout_below="@id/cv_company"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/primaryOrange"
+            android:layout_marginHorizontal="16dp"
+            android:text="@string/cerita"
+            tools:targetApi="o" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_cerita"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_below="@id/tv_story"
+            app:cardCornerRadius="4dp"
+            tools:targetApi="o">
+
+            <TextView
+                android:id="@+id/tv_detvol_story"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginHorizontal="16dp"
+                android:fontFamily="@font/montserrat"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"
+                android:text="@string/tv_story_volunteer"
+                tools:targetApi="o" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_fasilitas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat"
+            android:layout_below="@id/cv_cerita"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginHorizontal="16dp"
+            android:textColor="@color/primaryOrange"
+            android:text="@string/lokasi_sekolah"
+            tools:targetApi="o" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_lokasi"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_below="@id/tv_fasilitas"
+            app:cardCornerRadius="4dp"
+            tools:targetApi="o">
+
+            <TextView
+                android:id="@+id/tv_detvol_lokasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat"
+                android:layout_marginHorizontal="16dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"
+                android:text="@string/example_detvol_lokasi"
+                tools:targetApi="o" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_kriteria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat"
+            android:layout_below="@id/cv_lokasi"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/primaryOrange"
+            android:layout_marginHorizontal="16dp"
+            android:text="@string/kriteria"
+            tools:targetApi="o" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_kriteria"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_below="@id/tv_kriteria"
+            app:cardCornerRadius="4dp"
+            tools:targetApi="o">
+
+            <TextView
+                android:id="@+id/tv_detvol_kriteria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat"
+                android:layout_marginHorizontal="16dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"
+                android:text="@string/example_detvol_kriteria"
+                tools:targetApi="o" />
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</ScrollView>

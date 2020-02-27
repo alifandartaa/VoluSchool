@@ -11,25 +11,52 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageView
             android:id="@+id/profile_image"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_marginTop="60dp"
-            android:src="@drawable/ic_person_outline_black_24dp"
+            android:src="@drawable/img_bcc_filkom"
             android:layout_centerHorizontal="true"/>
 
         <TextView
-            android:id="@+id/tv_profil_hp"
+            android:id="@+id/tv_profil_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/string_profile"
+            android:text="@string/nama"
+            android:layout_marginTop="32dp"
+            android:layout_below="@id/profile_image"/>
+
+        <View
+            android:id="@+id/line_0"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/tv_profil_nama"
+            android:background="#c0c0c0"/>
+
+        <TextView
+            android:id="@+id/tv_value_nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:layout_marginStart="32dp"
+            android:text="@string/alif_andarta_al_falah"
+            style="@style/string_profile"
+            android:gravity="right"
+            android:layout_below="@id/profile_image"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/tv_profil_hp"/>
+
+        <TextView
+            android:id="@+id/tv_profil_hp"
+            style="@style/string_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="@string/no_hp"
-            android:textSize="18sp"
-            android:fontFamily="@font/montserrat"
-            android:textColor="@color/colorBlack"
-            android:textAllCaps="true"
-            android:layout_below="@id/profile_image"/>
+            android:layout_below="@id/line_0"/>
 
         <View
             android:id="@+id/line_1"
@@ -43,15 +70,12 @@
             android:id="@+id/tv_value_no_hp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:layout_marginStart="32dp"
             android:text="@string/example_nohp"
-            android:textSize="18sp"
-            android:fontFamily="@font/montserrat"
-            android:textColor="@color/colorBlack"
-            android:textAllCaps="true"
+            style="@style/string_profile"
             android:gravity="right"
-            android:layout_below="@id/profile_image"
+            android:layout_below="@id/line_0"
             android:layout_alignParentEnd="true"
             android:layout_toEndOf="@id/tv_profil_hp"/>
 
@@ -60,10 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/no_ktp"
-            android:textSize="18sp"
-            android:fontFamily="@font/montserrat"
-            android:textColor="@color/colorBlack"
-            android:textAllCaps="true"
+            style="@style/string_profile"
             android:layout_below="@id/line_1"
             android:layout_marginTop="16dp"
             />
@@ -76,10 +97,7 @@
             android:layout_marginStart="32dp"
             android:gravity="right"
             android:text="@string/example_ktp"
-            android:textSize="18sp"
-            android:fontFamily="@font/montserrat"
-            android:textColor="@color/colorBlack"
-            android:textAllCaps="true"
+            style="@style/string_profile"
             android:layout_below="@id/line_1"
             android:layout_alignParentEnd="true"
             android:layout_toEndOf="@id/tv_profil_hp"

@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/metode_pembayaran"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/primaryOrange"
         android:fontFamily="@font/montserrat"
         android:layout_marginTop="16dp"
         android:textSize="16sp"/>
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:text="@string/nominal_donasi"
         android:layout_marginTop="32dp"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/primaryOrange"
         android:fontFamily="@font/montserrat"
         android:textSize="16sp"/>
 
@@ -39,6 +39,7 @@
         android:id="@+id/et_nominal_donasi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
         android:inputType="number" />
 
     <TextView
@@ -47,7 +48,7 @@
         android:layout_height="wrap_content"
         android:text="@string/sembunyikan_nama"
         android:layout_marginTop="32dp"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/primaryOrange"
         android:fontFamily="@font/montserrat"
         android:textSize="16sp"/>
 
@@ -69,6 +70,6 @@
         android:textColor="#FFFF"
         android:fontFamily="@font/montserrat"
         android:textSize="16sp"
-        android:layout_marginTop="400dp"/>
+        android:layout_marginTop="300dp"/>
 
 </LinearLayout>

@@ -6,6 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/cv_donate"
+    card_view:layout_goneMarginEnd="4dp"
+    card_view:layout_goneMarginBottom="4dp"
+    card_view:layout_goneMarginTop="4dp"
+    card_view:layout_goneMarginStart="4dp"
+    android:layout_marginBottom="2dp"
+    android:layout_marginStart="2dp"
+    android:layout_marginEnd="2dp"
     card_view:cardCornerRadius="4dp">
 
     <RelativeLayout
@@ -17,7 +24,8 @@
             android:layout_width="150dp"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:background="@drawable/img_sd_mburing"/>
+            android:background="@drawable/img_sd_mburing"
+            android:contentDescription="@string/image_school" />
         <TextView
             android:id="@+id/tv_school_donate"
             android:layout_width="wrap_content"
@@ -47,7 +55,7 @@
 
         <TextView
             android:id="@+id/tv_cost_donate"
-            android:layout_width="wrap_content"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
@@ -56,8 +64,31 @@
             android:fontFamily="@font/montserrat"
             android:layout_below="@id/tv_saved"
             android:layout_toEndOf="@id/iv_img_donate"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:text="@string/tv_value_rp" />
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/target_total"
+            android:fontFamily="@font/montserrat"
+            android:layout_toEndOf="@id/tv_saved"
+            android:layout_below="@id/tv_school_donate"
+            android:gravity="end"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_cost_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:layout_toEndOf="@id/tv_cost_donate"
+            android:layout_below="@id/tv_saved"
+            android:layout_marginTop="2dp"
+            android:textSize="12sp"
+            android:gravity="start"
+            android:text="@string/tv_value_rp"/>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

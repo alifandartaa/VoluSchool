@@ -47,7 +47,7 @@ public class DetailDonationActivity extends AppCompatActivity {
         intent = getIntent();
         postDonation = intent.getParcelableExtra(EXTRA_DONATION);
         tvDetSchool.setText(postDonation.getSchoolName());
-        tvDetCost.setText(String.valueOf(postDonation.getDonationCost()));
+        tvDetCost.append(String.valueOf(postDonation.getDonationCost()));
         tvDetTotal.append(String.valueOf(postDonation.getTotalCost()));
         tvCompany.setText(postDonation.getCompany());
         tvStory.setText(postDonation.getStory());

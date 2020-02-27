@@ -1,16 +1,20 @@
 package com.example.voluschool.fragments;
 
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.renderscript.ScriptGroup;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.voluschool.R;
@@ -23,6 +27,7 @@ public class CreateDonatPostFragment extends Fragment {
 
     private Button btnCreateDonasi;
     private Button btnUpload;
+    private EditText etTargetDana;
 
     public CreateDonatPostFragment() {
         // Required empty public constructor
@@ -42,6 +47,7 @@ public class CreateDonatPostFragment extends Fragment {
 
         btnCreateDonasi = view.findViewById(R.id.btn_create_donat);
         btnUpload = view.findViewById(R.id.btn_upimg_don);
+        etTargetDana = view.findViewById(R.id.et_crcost_school);
 
         btnCreateDonasi.setOnClickListener(new View.OnClickListener() {
             @Override

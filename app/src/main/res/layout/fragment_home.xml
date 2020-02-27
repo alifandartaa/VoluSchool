@@ -54,6 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:textSize="18sp"
+            android:textColor="@color/primaryOrange"
             android:fontFamily="@font/montserrat"
             android:text="@string/string_invite_volu"/>
 
@@ -69,6 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:textSize="18sp"
+            android:textColor="@color/primaryOrange"
             android:fontFamily="@font/montserrat"
             android:text="@string/invite_donate"/>
 

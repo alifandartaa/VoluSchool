@@ -6,6 +6,10 @@
     android:padding="16dp"
     tools:context=".fragments.CreateVoluPostFragment">
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:orientation="vertical"
@@ -18,6 +22,7 @@
             android:layout_height="wrap_content"
             android:text="@string/nama_sekolah"
             android:fontFamily="@font/montserrat"
+            android:textColor="@color/primaryOrange"
             android:textSize="18sp"/>
 
         <EditText
@@ -34,6 +39,7 @@
             android:layout_height="wrap_content"
             android:text="@string/deskripsi_sekolah"
             android:fontFamily="@font/montserrat"
+            android:textColor="@color/primaryOrange"
             android:textSize="18sp"/>
 
         <EditText
@@ -51,6 +57,7 @@
             android:layout_height="wrap_content"
             android:text="@string/lokasi_sekolah"
             android:fontFamily="@font/montserrat"
+            android:textColor="@color/primaryOrange"
             android:textSize="18sp"/>
 
         <EditText
@@ -68,6 +75,7 @@
             android:layout_height="wrap_content"
             android:text="@string/kriteria_volunteer"
             android:fontFamily="@font/montserrat"
+            android:textColor="@color/primaryOrange"
             android:textSize="18sp"/>
 
         <EditText
@@ -85,6 +93,7 @@
             android:layout_height="wrap_content"
             android:text="@string/jumlah_volunteer"
             android:fontFamily="@font/montserrat"
+            android:textColor="@color/primaryOrange"
             android:textSize="18sp"/>
 
         <EditText
@@ -105,16 +114,18 @@
             android:textSize="16sp"
             android:text="@string/upload" />
 
-    </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_create_vol"
-        android:background="@drawable/bg_btn_style"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/cari_volunteer"
-        android:layout_gravity="bottom|center_horizontal"
-        android:textColor="#FFFF"
-        android:fontFamily="@font/montserrat"/>
+        <Button
+            android:id="@+id/btn_create_vol"
+            android:background="@drawable/bg_btn_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cari_volunteer"
+            android:layout_marginTop="48dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:textColor="#FFFF"
+            android:fontFamily="@font/montserrat"/>
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>
