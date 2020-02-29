@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/img_bank_bri"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="60dp"
+        android:text="1. Masukkan kartu ATM BRI dan masukkan PIN"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/roboto"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:text="2. Pilih Transaksi Lainnya > Transfer > Virtual Account"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/roboto"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:text="3. Masukkan 39558 diikuti dengan nomor hp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/roboto"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:text="4. Masukkan nilai saldo"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/roboto"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:text="5. Ikuti instruksi hingga selesai"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/roboto"/>
+
+</LinearLayout>
