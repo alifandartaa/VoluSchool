@@ -4,7 +4,8 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class PostDonation implements Parcelable {
-    private String id;
+    public static int count = 0;
+    private int id;
     private String schoolName;
     private int donationCost;
     private int totalCost;
@@ -14,7 +15,6 @@ public class PostDonation implements Parcelable {
 
 
     protected PostDonation(Parcel in) {
-        id = in.readString();
         schoolName = in.readString();
         donationCost = in.readInt();
         totalCost = in.readInt();
@@ -42,7 +42,6 @@ public class PostDonation implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(id);
         dest.writeString(schoolName);
         dest.writeInt(donationCost);
         dest.writeInt(totalCost);
@@ -51,8 +50,8 @@ public class PostDonation implements Parcelable {
         dest.writeInt(schoolImage);
     }
 
-    public PostDonation(String id, String schoolName, int donationCost, int totalCost, String story, String company, int schoolImage) {
-        this.id = id;
+    public PostDonation(String schoolName, int donationCost, int totalCost, String story, String company, int schoolImage) {
+        this.id = ++count;
         this.schoolName = schoolName;
         this.donationCost = donationCost;
         this.totalCost = totalCost;
@@ -61,11 +60,11 @@ public class PostDonation implements Parcelable {
         this.schoolImage = schoolImage;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
