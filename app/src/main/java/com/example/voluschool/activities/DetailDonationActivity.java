@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.voluschool.R;
@@ -23,7 +24,7 @@ public class DetailDonationActivity extends AppCompatActivity {
     public static final String EXTRA_DONATION = "extra_donation";
     private Intent intent;
     private PostDonation postDonation;
-    private TextView tvDetSchool, tvDetCost, tvDetTotal, tvCompany, tvStory;
+    private TextView tvDetSchool, tvDetCost, tvDetTotal, tvCompany, tvStory, tvDonPenuh;
     private ImageView ivDetSchool;
     private Button btnDonate;
     private FragmentManager fragmentManager;
@@ -43,10 +44,14 @@ public class DetailDonationActivity extends AppCompatActivity {
         fragmentTransaction.commit();
 
         init();
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
+        getSupportActionBar().setTitle(getResources().getString(R.string.detail_sekolah));
         intent = getIntent();
         postDonation = intent.getParcelableExtra(EXTRA_DONATION);
         tvDetSchool.setText(postDonation.getSchoolName());
+        if(postDonation.getDonationCost() == postDonation.getTotalCost()){
+            tvDonPenuh.setVisibility(View.VISIBLE);
+        }
         tvDetCost.append(String.valueOf(postDonation.getDonationCost()));
         tvDetTotal.append(String.valueOf(postDonation.getTotalCost()));
         tvCompany.setText(postDonation.getCompany());
@@ -58,8 +63,12 @@ public class DetailDonationActivity extends AppCompatActivity {
         btnDonate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DetailDonationActivity.this, FormDonasiActivity.class);
-                startActivity(intent);
+                if(postDonation.getDonationCost() == postDonation.getTotalCost()){
+                    Toast.makeText(DetailDonationActivity.this, getString(R.string.string_penuh), Toast.LENGTH_SHORT).show();
+                }else{
+                    Intent intent = new Intent(DetailDonationActivity.this, FormDonasiActivity.class);
+                    startActivity(intent);
+                }
             }
         });
     }
@@ -72,5 +81,6 @@ public class DetailDonationActivity extends AppCompatActivity {
         tvStory = findViewById(R.id.tv_detail_story);
         btnDonate = findViewById(R.id.btn_detail_donate);
         ivDetSchool = findViewById(R.id.iv_detail_school);
+        tvDonPenuh = findViewById(R.id.tv_detdon_penuh);
     }
 }

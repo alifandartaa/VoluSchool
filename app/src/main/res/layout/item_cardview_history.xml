@@ -35,7 +35,7 @@
             android:layout_marginBottom="8dp"
             android:layout_toEndOf="@id/img_item_photo"
             android:textSize="18sp"
-            android:fontFamily="@font/roboto"
+            android:fontFamily="@font/montserrat"
             android:textColor="@color/colorBlack"
             android:textStyle="bold"
             android:text="@string/donation_name" />
@@ -49,11 +49,10 @@
             android:layout_marginTop="32dp"
             android:layout_toEndOf="@id/img_item_photo"
             android:ellipsize="end"
-            android:fontFamily="@font/roboto"
+            android:fontFamily="@font/montserrat"
             android:textSize="16sp"
-            android:textColor="@color/colorBlack"
             android:maxLines="5"
-            android:text="@string/cost_donation" />
+            android:text="@string/tv_value_rp" />
         <TextView
             android:id="@+id/tv_history_date"
             android:layout_width="wrap_content"
@@ -65,8 +64,7 @@
             android:ellipsize="end"
             android:maxLines="5"
             android:textSize="16sp"
-            android:fontFamily="@font/roboto"
-            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/montserrat"
             android:text="@string/date_donation" />
     </RelativeLayout>
 

@@ -48,7 +48,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryC
 
         public void bind(History history) {
             tvSchool.setText(history.getSchoolName());
-            tvTerkumpul.setText(history.getCost());
+            tvTerkumpul.append(String.valueOf(history.getCost()));;
             tvDate.setText(history.getDate());
         }
     }

@@ -53,7 +53,7 @@ public class PostDonateAdapter extends RecyclerView.Adapter<PostDonateAdapter.Do
     }
 
     public class DonateCardViewHolder extends RecyclerView.ViewHolder {
-        TextView tvSchool, tvTerkumpul, tvCost, tvTotal;
+        TextView tvSchool, tvTerkumpul, tvCost, tvTotal, tvPenuh;
         ImageView ivSchool;
         public DonateCardViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -62,12 +62,16 @@ public class PostDonateAdapter extends RecyclerView.Adapter<PostDonateAdapter.Do
             tvCost = itemView.findViewById(R.id.tv_cost_donate);
             ivSchool = itemView.findViewById(R.id.iv_img_donate);
             tvTotal = itemView.findViewById(R.id.tv_cost_total);
+            tvPenuh = itemView.findViewById(R.id.tv_donate_penuh);
         }
 
         void bind(PostDonation postDonation) {
             tvSchool.setText(postDonation.getSchoolName());
             tvCost.append(String.valueOf(postDonation.getDonationCost()));
             tvTotal.append(String.valueOf(postDonation.getTotalCost()));
+            if(postDonation.getDonationCost() == postDonation.getTotalCost()){
+                tvPenuh.setVisibility(View.VISIBLE);
+            }
             Glide.with(itemView)
                     .load(postDonation.getSchoolImage())
                     .apply(new RequestOptions().override(150, 100))

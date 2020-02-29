@@ -44,6 +44,15 @@ public class FormDonasiActivity extends AppCompatActivity implements View.OnClic
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             choosenBank = spBank.getSelectedItem().toString();
+                            if(choosenBank.equals("BNI")){
+                                setContentView(R.layout.layout_bni);
+                            }else if(choosenBank.equals("BCA")){
+                                setContentView(R.layout.layout_bca);
+                            }else if(choosenBank.equals("Mandiri")){
+                                setContentView(R.layout.layout_mandiri);
+                            }else if(choosenBank.equals("BRI")){
+                                setContentView(R.layout.layout_bri);
+                            }
                             Toast.makeText(FormDonasiActivity.this, getString(R.string.result_donasi), Toast.LENGTH_SHORT).show();
                             dialog.dismiss();
                         }
@@ -59,10 +68,10 @@ public class FormDonasiActivity extends AppCompatActivity implements View.OnClic
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
-    }
+//    @Override
+//    public void onBackPressed() {
+//        Intent intent = new Intent(this, MainActivity.class);
+//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        startActivity(intent);
+//    }
 }

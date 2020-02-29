@@ -98,6 +98,17 @@
     <string name="target_jumlah_orang">Target jumlah orang </string>
     <string name="volunteer">Volunteer</string>
     <string name="result_joinvol">Terima kasih telah bergabung</string>
+    <string name="detail_sekolah">Detail Sekolah</string>
+    <string name="tutup">Tutup</string>
+    <string name="example_detail_app">Voluschool adalah platform untuk membantu pendidikan yang ada di Indonesia melalui pemberian donasi dan juga volunteer tenaga pendidik.</string>
+    <string name="string_fitur1">Memberikan donasi berupa uang</string>
+    <string name="string_fit2">Mendaftar sebagai volunteer guru</string>
+    <string name="string_fit3">Open donasi untuk sekolah yang kekurangan fasilitas</string>
+    <string name="string_fit4">Open volunteer untuk sekolah yang kekurangan guru</string>
+    <string name="field_cannot_blank">Semua data wajib diisi!</string>
+    <string name="string_penuh">Donasi sudah penuh</string>
+    <string name="string_volu_penuh">Volunteer telah penuh</string>
+    <string name="shared_preference">Shared Preference</string>
 
     <string-array name="bank_arrays">
         <item>BCA</item>

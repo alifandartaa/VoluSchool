@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.voluschool.R;
@@ -18,7 +19,7 @@ public class DetailVolunteerActivity extends AppCompatActivity implements View.O
     public static final String EXTRA_VOLUNTEER = "extra_volunteer";
     private Intent intent;
     private PostVolunteer postVolunteer;
-    private TextView tvDetSchool, tvRegistered, tvTarget, tvCompany, tvStory, tvLocation, tvDonatur;
+    private TextView tvDetSchool, tvRegistered, tvTarget, tvCompany, tvStory, tvLocation, tvDonatur, tvVolPenuh;
     private ImageView ivDetSchool;
     private Button btnJoinVolu;
 
@@ -28,12 +29,18 @@ public class DetailVolunteerActivity extends AppCompatActivity implements View.O
         setContentView(R.layout.activity_detail_volunteer);
 
         init();
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
+        getSupportActionBar().setTitle(getResources().getString(R.string.detail_sekolah));
         intent = getIntent();
         postVolunteer = intent.getParcelableExtra(EXTRA_VOLUNTEER);
         tvDetSchool.setText(postVolunteer.getSchoolName());
+        if(postVolunteer.getRegisteredPeople() == postVolunteer.getTotalPeople()){
+            tvVolPenuh.setVisibility(View.VISIBLE);
+        }
         tvTarget.append(String.valueOf(postVolunteer.getTotalPeople()));
-        tvRegistered.append(String.valueOf(postVolunteer.getRegisteredPeople()));
+        String registered = String.valueOf(postVolunteer.getRegisteredPeople());
+        String formatted = "Terkumpul" + " " + registered + "orang";
+        tvRegistered.setText(formatted);
         tvCompany.setText(postVolunteer.getCompany());
         tvStory.setText(postVolunteer.getStory());
         Glide.with(this)
@@ -51,13 +58,18 @@ public class DetailVolunteerActivity extends AppCompatActivity implements View.O
         tvStory = findViewById(R.id.tv_detvol_story);
         ivDetSchool = findViewById(R.id.iv_detvol_school);
         btnJoinVolu = findViewById(R.id.btn_detail_donate);
+        tvVolPenuh = findViewById(R.id.tv_detvol_penuh);
     }
 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btn_detail_donate) {
-            Intent intent = new Intent(DetailVolunteerActivity.this, FormVolunteerActivity.class);
-            startActivity(intent);
+            if(postVolunteer.getRegisteredPeople() == postVolunteer.getTotalPeople()){
+                Toast.makeText(this, getString(R.string.string_volu_penuh), Toast.LENGTH_SHORT).show();
+            }else{
+                Intent intent = new Intent(DetailVolunteerActivity.this, FormVolunteerActivity.class);
+                startActivity(intent);
+            }
         }
     }
 }

@@ -16,7 +16,7 @@
             android:id="@+id/cv_img_volunteer"
             android:layout_width="match_parent"
             card_view:cardCornerRadius="25dp"
-            android:layout_height="135dp">
+            android:layout_height="110dp">
 
             <ImageView
                 android:id="@+id/iv_img_volunteer"
@@ -34,7 +34,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="12dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="4dp"
             android:fontFamily="@font/montserrat"
             android:layout_below="@id/cv_img_volunteer"
             android:layout_centerHorizontal="true"
@@ -42,6 +42,20 @@
             android:textColor="@color/colorBlack"
             android:textStyle="bold"
             tools:text="@string/school_name" />
+
+        <TextView
+            android:id="@+id/tv_volu_penuh"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFF"
+            android:background="@color/primaryOrange"
+            android:text="@string/tutup"
+            android:layout_below="@id/tv_school_volunteer"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"/>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

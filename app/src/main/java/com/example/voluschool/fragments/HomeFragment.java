@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -17,6 +18,7 @@ import android.view.ViewGroup;
 
 import com.example.voluschool.R;
 import com.example.voluschool.activities.CreatePostActivity;
+import com.example.voluschool.activities.DetailAplikasiActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 /**
@@ -27,6 +29,7 @@ public class HomeFragment extends Fragment {
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
     private FloatingActionButton floatingActionButton;
+    private CardView cvDetailApp;
 
 
     public HomeFragment() {
@@ -45,6 +48,7 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
         fragmentManager = getParentFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
 
@@ -60,6 +64,15 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), CreatePostActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        cvDetailApp = view.findViewById(R.id.cv_detail_app);
+        cvDetailApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent detailIntent = new Intent(getActivity(), DetailAplikasiActivity.class);
+                startActivity(detailIntent);
             }
         });
     }

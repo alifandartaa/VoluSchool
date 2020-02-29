@@ -54,17 +54,22 @@ public class PostVolunteerAdapter extends RecyclerView.Adapter<PostVolunteerAdap
     }
 
     public class VolunteerCardViewHolder extends RecyclerView.ViewHolder {
-        TextView tvSchool;
+        TextView tvSchool, tvPenuh;
         ImageView ivSchool;
 
         public VolunteerCardViewHolder(@NonNull View itemView) {
             super(itemView);
             tvSchool = itemView.findViewById(R.id.tv_school_volunteer);
             ivSchool = itemView.findViewById(R.id.iv_img_volunteer);
+            tvPenuh = itemView.findViewById(R.id.tv_volu_penuh);
         }
 
         public void bind(PostVolunteer postVolunteer) {
             tvSchool.setText(postVolunteer.getSchoolName());
+            if(postVolunteer.getRegisteredPeople() == postVolunteer.getTotalPeople()){
+                tvPenuh.setVisibility(View.VISIBLE);
+            }
+
             Glide.with(itemView)
                     .load(postVolunteer.getSchoolImage())
                     .apply(new RequestOptions().override(150, 100))

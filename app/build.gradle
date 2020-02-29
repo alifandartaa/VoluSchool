@@ -17,6 +17,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    android{
+        compileOptions{
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
 }
 
 dependencies {
@@ -38,5 +45,7 @@ dependencies {
     implementation 'android.arch.lifecycle:viewmodel:1.1.1'
     implementation 'com.squareup.retrofit2:retrofit:2.7.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
+    implementation 'com.google.code.gson:gson:2.8.6'
     implementation files('libs/PhotoUtil.jar')
+    implementation 'com.github.IntruderShanky:Frisson:2.1.1'
 }

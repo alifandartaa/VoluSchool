@@ -5,7 +5,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="250dp"
         android:src="@drawable/img_bank_bni"
         android:scaleType="fitXY"/>
 
@@ -15,7 +15,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_marginTop="60dp"
-        android:text="1. Masukkan kartu ATM BCA dan masukkan PIN"
+        android:text="1. Masukkan kartu ATM BNI dan masukkan PIN"
         android:textSize="16sp"
         android:textColor="@color/colorBlack"
         android:fontFamily="@font/roboto"/>

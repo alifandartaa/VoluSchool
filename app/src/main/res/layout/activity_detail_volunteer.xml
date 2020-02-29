@@ -32,6 +32,23 @@
             android:layout_below="@id/iv_detvol_school"/>
 
         <TextView
+            android:id="@+id/tv_detvol_penuh"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:layout_toEndOf="@id/tv_detvol_name"
+            android:layout_below="@id/iv_detvol_school"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="100dp"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:background="@color/primaryOrange"
+            android:textColor="#FFFF"
+            android:textStyle="bold"
+            android:text="@string/tutup" />
+
+        <TextView
             android:id="@+id/tv_detvol_people"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

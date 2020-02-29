@@ -198,7 +198,15 @@
                 android:textColor="#FFFF"
                 tools:targetApi="o" />
 
-
+        <ImageView
+            android:id="@+id/iv_reg_imgktp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="24dp"
+            android:scaleType="centerCrop"
+            android:layout_marginHorizontal="24dp"
+            android:background="@color/primaryOrange"
+            tools:targetApi="o" />
 
     <Button
         android:id="@+id/btn_submit_register"

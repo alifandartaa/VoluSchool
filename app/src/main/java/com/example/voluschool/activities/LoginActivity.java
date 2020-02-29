@@ -39,9 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        tvDoRegister = findViewById(R.id.tv_open_regis);
-        btnLogin = findViewById(R.id.btn_submit_login);
-
+        init();
         Objects.requireNonNull(getSupportActionBar()).hide();
 
         tvDoRegister.setOnClickListener(new View.OnClickListener() {
@@ -55,10 +53,23 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                requestLogin();
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
+                btnLogin.setEnabled(false);
+                if(etEmailLogin.getText().toString().isEmpty() || etPasswordLogin.getText().toString().isEmpty()){
+                    Toast.makeText(LoginActivity.this, getString(R.string.field_cannot_blank), Toast.LENGTH_SHORT).show();
+                    btnLogin.setEnabled(true);
+                }else{
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
             }
         });
+    }
+
+    private void init() {
+        etEmailLogin = findViewById(R.id.et_email_login);
+        etPasswordLogin = findViewById(R.id.et_passwd_login);
+        tvDoRegister = findViewById(R.id.tv_open_regis);
+        btnLogin = findViewById(R.id.btn_submit_login);
     }
 
     private void requestLogin(){

@@ -63,7 +63,7 @@ public class VolunteerFragment extends Fragment {
 //        private String company;
 //        private int schoolImage;
 
-        PostVolunteer postVolunteer1 = new PostVolunteer("SD Tulusayu", 3, 10, "Tenaga kerja guru di sekolah ini sangatlah minim. Hal tersebut dikarenakan kurang akses untuk menuju tempat tersebut sangat sulit",
+        PostVolunteer postVolunteer1 = new PostVolunteer("SD Tulusayu", 10, 10, "Tenaga kerja guru di sekolah ini sangatlah minim. Hal tersebut dikarenakan kurang akses untuk menuju tempat tersebut sangat sulit",
                 getResources().getString(R.string.example_detvol_lokasi), "Jago Nge pool","BCC", R.drawable.img_sd_tulusayu );
         PostVolunteer postVolunteer2 = new PostVolunteer( "SD Bakalan", 4, 9,"Tenaga kerja guru di sekolah ini sangatlah minim. Hal tersebut dikarenakan kurang akses untuk menuju tempat tersebut sangat sulit",
                 getResources().getString(R.string.example_detvol_lokasi), "Jago Nge pool","BCC", R.drawable.img_sd_bakalan);
