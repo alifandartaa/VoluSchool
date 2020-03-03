@@ -3,27 +3,33 @@ package com.example.voluschool.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-//namaLengkap, email, password, confPass, noHp, noKtp
 public class User implements Parcelable {
     private int id;
     private String name;
     private String email;
     private String password;
-    private String confirmpw;
     private String nohp;
     private String noktp;
-    private String pathKtp;
+    private String image;
 
-
-    protected User(Parcel in) {
+    private User(Parcel in) {
         id = in.readInt();
         name = in.readString();
         email = in.readString();
         password = in.readString();
-        confirmpw = in.readString();
         nohp = in.readString();
         noktp = in.readString();
-        pathKtp = in.readString();
+        image = in.readString();
+    }
+
+    public User(int id, String name, String email, String password, String nohp, String noktp, String image) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.nohp = nohp;
+        this.noktp = noktp;
+        this.image = image;
     }
 
     public static final Creator<User> CREATOR = new Creator<User>() {
@@ -49,21 +55,9 @@ public class User implements Parcelable {
         dest.writeString(name);
         dest.writeString(email);
         dest.writeString(password);
-        dest.writeString(confirmpw);
         dest.writeString(nohp);
         dest.writeString(noktp);
-        dest.writeString(pathKtp);
-    }
-
-    public User(int id, String name, String email, String password, String confirmpw, String nohp, String noktp, String pathKtp) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.confirmpw = confirmpw;
-        this.nohp = nohp;
-        this.noktp = noktp;
-        this.pathKtp = pathKtp;
+        dest.writeString(image);
     }
 
     public int getId() {
@@ -82,51 +76,4 @@ public class User implements Parcelable {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getConfirmpw() {
-        return confirmpw;
-    }
-
-    public void setConfirmpw(String confirmpw) {
-        this.confirmpw = confirmpw;
-    }
-
-    public String getNohp() {
-        return nohp;
-    }
-
-    public void setNohp(String nohp) {
-        this.nohp = nohp;
-    }
-
-    public String getNoktp() {
-        return noktp;
-    }
-
-    public void setNoktp(String noktp) {
-        this.noktp = noktp;
-    }
-
-    public String getPathKtp() {
-        return pathKtp;
-    }
-
-    public void setPathKtp(String pathKtp) {
-        this.pathKtp = pathKtp;
-    }
 }

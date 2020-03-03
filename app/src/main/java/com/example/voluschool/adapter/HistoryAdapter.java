@@ -14,7 +14,7 @@ import com.example.voluschool.model.History;
 import java.util.ArrayList;
 
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryCardViewHolder> {
-    private ArrayList<History> listHistory = new ArrayList<>();
+    private ArrayList<History> listHistory;
 
     public HistoryAdapter(ArrayList<History> listHistory) {
         this.listHistory = listHistory;
@@ -37,18 +37,19 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryC
         return listHistory.size();
     }
 
-    public class HistoryCardViewHolder extends RecyclerView.ViewHolder {
+    class HistoryCardViewHolder extends RecyclerView.ViewHolder {
         TextView tvSchool, tvTerkumpul, tvDate;
-        public HistoryCardViewHolder(@NonNull View itemView) {
+
+        HistoryCardViewHolder(@NonNull View itemView) {
             super(itemView);
             tvSchool = itemView.findViewById(R.id.tv_history_donation);
             tvTerkumpul = itemView.findViewById(R.id.tv_history_cost);
             tvDate = itemView.findViewById(R.id.tv_history_date);
         }
 
-        public void bind(History history) {
+        void bind(History history) {
             tvSchool.setText(history.getSchoolName());
-            tvTerkumpul.append(String.valueOf(history.getCost()));;
+            tvTerkumpul.append(String.valueOf(history.getCost()));
             tvDate.setText(history.getDate());
         }
     }

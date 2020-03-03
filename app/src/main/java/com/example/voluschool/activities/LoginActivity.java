@@ -1,24 +1,23 @@
 package com.example.voluschool.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.voluschool.R;
 import com.example.voluschool.model.Login;
-import com.example.voluschool.model.User;
 import com.example.voluschool.responses.LoginResponse;
-import com.example.voluschool.responses.RegisterResponse;
 import com.example.voluschool.retrofit.ApiClient;
 import com.example.voluschool.retrofit.MyApi;
+import com.example.voluschool.utils.AppPreference;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
@@ -30,37 +29,29 @@ public class LoginActivity extends AppCompatActivity {
     private TextView tvDoRegister;
     private Button btnLogin;
     private EditText etEmailLogin, etPasswordLogin;
-    private String email, password;
     MyApi myApi;
     ProgressDialog progressDialog;
+    private AppPreference appPreference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        appPreference = new AppPreference(LoginActivity.this);
         init();
         Objects.requireNonNull(getSupportActionBar()).hide();
 
-        tvDoRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(intent);
-            }
+        tvDoRegister.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
         });
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                requestLogin();
-                btnLogin.setEnabled(false);
-                if(etEmailLogin.getText().toString().isEmpty() || etPasswordLogin.getText().toString().isEmpty()){
-                    Toast.makeText(LoginActivity.this, getString(R.string.field_cannot_blank), Toast.LENGTH_SHORT).show();
-                    btnLogin.setEnabled(true);
-                }else{
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(intent);
-                }
+        btnLogin.setOnClickListener(v -> {
+            if (etEmailLogin.getText().toString().isEmpty() || etPasswordLogin.getText().toString().isEmpty()) {
+                Toast.makeText(LoginActivity.this, getString(R.string.field_cannot_blank), Toast.LENGTH_SHORT).show();
+                btnLogin.setEnabled(true);
+            } else {
+                requestLogin();
             }
         });
     }
@@ -79,32 +70,47 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
 
-        email = etEmailLogin.getText().toString();
-        password = etPasswordLogin.getText().toString();
+        String email = etEmailLogin.getText().toString();
+        String password = etPasswordLogin.getText().toString();
 
         myApi = ApiClient.getClient().create(MyApi.class);
         Login login = new Login(email, password);
 
         Call<LoginResponse> loginCall = myApi.login(login);
 
+
         loginCall.enqueue(new Callback<LoginResponse>() {
             @Override
-            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+            public void onResponse(@NotNull Call<LoginResponse> call, @NotNull Response<LoginResponse> response) {
                 if(response.isSuccessful()){
                     progressDialog.dismiss();
-                    Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                    String token = Objects.requireNonNull(response.body()).getToken();
+                    Toast.makeText(LoginActivity.this, token, Toast.LENGTH_SHORT).show();
+                    appPreference.saveToken(token);
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
                 }else{
-                    Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                    progressDialog.dismiss();
+                    Toast.makeText(LoginActivity.this, String.valueOf(response.code()), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
-            public void onFailure(Call<LoginResponse> call, Throwable t) {
+            public void onFailure(@NotNull Call<LoginResponse> call, @NotNull Throwable t) {
                 progressDialog.dismiss();
                 Toast.makeText(LoginActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (appPreference.isLoggedIn()) {
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 }

@@ -39,67 +39,27 @@ public class PostVolunteer implements Parcelable {
         return schoolName;
     }
 
-    public void setSchoolName(String schoolName) {
-        this.schoolName = schoolName;
-    }
-
     public int getRegisteredPeople() {
         return registeredPeople;
-    }
-
-    public void setRegisteredPeople(int registeredPeople) {
-        this.registeredPeople = registeredPeople;
     }
 
     public int getTotalPeople() {
         return totalPeople;
     }
 
-    public void setTotalPeople(int totalPeople) {
-        this.totalPeople = totalPeople;
-    }
-
     public String getStory() {
         return story;
-    }
-
-    public void setStory(String story) {
-        this.story = story;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public String getCriteria() {
-        return criteria;
-    }
-
-    public void setCriteria(String criteria) {
-        this.criteria = criteria;
     }
 
     public String getCompany() {
         return company;
     }
 
-    public void setCompany(String company) {
-        this.company = company;
-    }
-
     public int getSchoolImage() {
         return schoolImage;
     }
 
-    public void setSchoolImage(int schoolImage) {
-        this.schoolImage = schoolImage;
-    }
-
-    protected PostVolunteer(Parcel in) {
+    private PostVolunteer(Parcel in) {
         id = in.readInt();
         schoolName = in.readString();
         registeredPeople = in.readInt();

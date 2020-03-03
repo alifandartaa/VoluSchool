@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/cv_inbox"
     android:layout_gravity="center">
 
     <RelativeLayout
@@ -24,7 +22,6 @@
             tools:text="@string/inbox_message" />
 
         <View
-            android:id="@+id/line_3"
             android:layout_width="match_parent"
             android:layout_marginTop="12dp"
             android:layout_height="1dp"

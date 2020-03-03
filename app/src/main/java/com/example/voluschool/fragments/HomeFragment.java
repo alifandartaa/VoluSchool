@@ -3,18 +3,16 @@ package com.example.voluschool.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.example.voluschool.R;
 import com.example.voluschool.activities.CreatePostActivity;
@@ -25,11 +23,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment {
-
-    private FragmentManager fragmentManager;
-    private FragmentTransaction fragmentTransaction;
-    private FloatingActionButton floatingActionButton;
-    private CardView cvDetailApp;
 
 
     public HomeFragment() {
@@ -49,8 +42,8 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
-        fragmentManager = getParentFragmentManager();
-        fragmentTransaction = fragmentManager.beginTransaction();
+        FragmentManager fragmentManager = getParentFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         DonateFragment donateFragment = new DonateFragment();
         VolunteerFragment volunteerFragment = new VolunteerFragment();
@@ -58,22 +51,16 @@ public class HomeFragment extends Fragment {
         fragmentTransaction.replace(R.id.fg_volunteer, volunteerFragment);
         fragmentTransaction.commit();
 
-        floatingActionButton = view.findViewById(R.id.fab_create_post);
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), CreatePostActivity.class);
-                startActivity(intent);
-            }
+        FloatingActionButton floatingActionButton = view.findViewById(R.id.fab_create_post);
+        floatingActionButton.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), CreatePostActivity.class);
+            startActivity(intent);
         });
 
-        cvDetailApp = view.findViewById(R.id.cv_detail_app);
-        cvDetailApp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent detailIntent = new Intent(getActivity(), DetailAplikasiActivity.class);
-                startActivity(detailIntent);
-            }
+        CardView cvDetailApp = view.findViewById(R.id.cv_detail_app);
+        cvDetailApp.setOnClickListener(v -> {
+            Intent detailIntent = new Intent(getActivity(), DetailAplikasiActivity.class);
+            startActivity(detailIntent);
         });
     }
 }

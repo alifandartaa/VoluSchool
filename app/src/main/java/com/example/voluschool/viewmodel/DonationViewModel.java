@@ -8,7 +8,6 @@ import com.example.voluschool.retrofit.ApiClient;
 import com.example.voluschool.retrofit.MyApi;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class DonationViewModel extends ViewModel {
     MyApi myApi;

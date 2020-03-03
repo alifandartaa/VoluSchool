@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="wrap_content"
-    android:layout_height="190dp"
-    android:id="@+id/cv_volunteer">
+    android:layout_height="190dp">
 
     <RelativeLayout
         android:layout_width="150dp"
@@ -23,7 +22,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:background="@drawable/img_sd_mburing"/>
+                android:background="@drawable/img_sd_mburing"
+                android:contentDescription="@string/image_cardview_volunteer" />
 
         </androidx.cardview.widget.CardView>
 

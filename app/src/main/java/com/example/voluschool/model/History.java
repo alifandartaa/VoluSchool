@@ -15,23 +15,12 @@ public class History {
         return schoolName;
     }
 
-    public void setSchoolName(String schoolName) {
-        this.schoolName = schoolName;
-    }
-
     public String getCost() {
         return cost;
-    }
-
-    public void setCost(String cost) {
-        this.cost = cost;
     }
 
     public String getDate() {
         return Date;
     }
 
-    public void setDate(String date) {
-        Date = date;
-    }
 }

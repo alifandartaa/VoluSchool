@@ -1,7 +1,5 @@
 package com.example.voluschool.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,16 +8,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.bumptech.glide.Glide;
 import com.example.voluschool.R;
 import com.example.voluschool.model.PostVolunteer;
 
+import java.util.Objects;
+
 public class DetailVolunteerActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final String EXTRA_VOLUNTEER = "extra_volunteer";
-    private Intent intent;
     private PostVolunteer postVolunteer;
-    private TextView tvDetSchool, tvRegistered, tvTarget, tvCompany, tvStory, tvLocation, tvDonatur, tvVolPenuh;
+    private TextView tvDetSchool, tvRegistered, tvTarget, tvCompany, tvStory, tvVolPenuh;
     private ImageView ivDetSchool;
     private Button btnJoinVolu;
 
@@ -29,11 +30,10 @@ public class DetailVolunteerActivity extends AppCompatActivity implements View.O
         setContentView(R.layout.activity_detail_volunteer);
 
         init();
-//        getSupportActionBar().hide();
-        getSupportActionBar().setTitle(getResources().getString(R.string.detail_sekolah));
-        intent = getIntent();
+        Objects.requireNonNull(getSupportActionBar()).setTitle(getResources().getString(R.string.detail_sekolah));
+        Intent intent = getIntent();
         postVolunteer = intent.getParcelableExtra(EXTRA_VOLUNTEER);
-        tvDetSchool.setText(postVolunteer.getSchoolName());
+        tvDetSchool.setText(Objects.requireNonNull(postVolunteer).getSchoolName());
         if(postVolunteer.getRegisteredPeople() == postVolunteer.getTotalPeople()){
             tvVolPenuh.setVisibility(View.VISIBLE);
         }

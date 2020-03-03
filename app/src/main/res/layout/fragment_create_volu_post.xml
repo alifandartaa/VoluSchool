@@ -17,7 +17,6 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/tv_crvolu_nameschool"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/nama_sekolah"
@@ -26,14 +25,14 @@
             android:textSize="18sp"/>
 
         <EditText
-            android:id="@+id/et_crvolu_nameschool"
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"/>
+            android:importantForAutofill="no"
+            android:inputType="text"
+            tools:ignore="Autofill,LabelFor" />
 
         <TextView
-            android:id="@+id/tv_crvolue_descschool"
             android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,15 +42,15 @@
             android:textSize="18sp"/>
 
         <EditText
-            android:id="@+id/et_crvolue_descschool"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="top"
             android:lines="2"
-            android:inputType="textMultiLine"/>
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            tools:ignore="Autofill,LabelFor" />
 
         <TextView
-            android:id="@+id/tv_crvolue_locschool"
             android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,15 +60,15 @@
             android:textSize="18sp"/>
 
         <EditText
-            android:id="@+id/et_crvolue_locschool"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="top"
             android:lines="2"
-            android:inputType="textMultiLine" />
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            tools:ignore="Autofill,LabelFor" />
 
         <TextView
-            android:id="@+id/tv_crvolue_critvol"
             android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -79,15 +78,15 @@
             android:textSize="18sp"/>
 
         <EditText
-            android:id="@+id/et_crvolue_critvol"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="top"
             android:lines="3"
-            android:inputType="textMultiLine"/>
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            tools:ignore="Autofill,LabelFor" />
 
         <TextView
-            android:id="@+id/tv_crvolue_totvol"
             android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -97,10 +96,11 @@
             android:textSize="18sp"/>
 
         <EditText
-            android:id="@+id/et_crvolue__totvol"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"/>
+            android:importantForAutofill="no"
+            android:inputType="number"
+            tools:ignore="Autofill,LabelFor" />
 
         <Button
             android:id="@+id/btn_upimg_vol"
@@ -120,7 +120,8 @@
             android:layout_height="200dp"
             android:layout_marginTop="24dp"
             android:scaleType="centerCrop"
-            android:src="@color/primaryOrange"/>
+            android:contentDescription="@string/image_ktp_create_volu"
+            android:src="@color/primaryOrange" />
 
 
         <Button

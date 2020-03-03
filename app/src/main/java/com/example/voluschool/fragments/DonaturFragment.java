@@ -2,6 +2,9 @@ package com.example.voluschool.fragments;
 
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -9,15 +12,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.example.voluschool.R;
 import com.example.voluschool.adapter.DonaturAdapter;
-import com.example.voluschool.adapter.PostDonateAdapter;
 import com.example.voluschool.model.Donatur;
-import com.example.voluschool.model.PostDonation;
 
 import java.util.ArrayList;
 
@@ -45,11 +42,6 @@ public class DonaturFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         RecyclerView rvDonatur = view.findViewById(R.id.rv_donatur);
-
-//        private String id;
-//        private String nama;
-//        private int donationCost;
-//        private String date;
 
         Donatur donatur1 = new Donatur("1", "Alif", 10000, "25 Februari 2020");
         Donatur donatur2 = new Donatur("2", "Eka", 20000, "26 Februari 2020");

@@ -2,6 +2,9 @@ package com.example.voluschool.fragments;
 
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -9,26 +12,17 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ProgressBar;
-
 import com.example.voluschool.R;
 import com.example.voluschool.adapter.InboxAdapter;
 import com.example.voluschool.model.Inbox;
 
 import java.util.ArrayList;
 
-import static android.view.View.GONE;
-import static android.view.View.VISIBLE;
-
 /**
  * A simple {@link Fragment} subclass.
  */
 public class InboxFragment extends Fragment {
 
-    private ProgressBar progressBar;
     private ArrayList<Inbox> inboxes = new ArrayList<>();
 
     public InboxFragment() {
@@ -46,8 +40,6 @@ public class InboxFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        progressBar = view.findViewById(R.id.pb_inbox);
         RecyclerView rvInbox = view.findViewById(R.id.rv_inbox);
 
         Inbox inbox1 = new Inbox("Donasi kepada SD Mulyorejo tersalurkan pada tanggal 19 Februari 2019.");
@@ -59,24 +51,10 @@ public class InboxFragment extends Fragment {
         inboxes.add(inbox2);
         inboxes.add(inbox3);
         inboxes.add(inbox4);
-//        showRecyclerList();
         rvInbox.setHasFixedSize(true);
         rvInbox.setLayoutManager(new LinearLayoutManager(this.getContext()));
         InboxAdapter inboxAdapter= new InboxAdapter(inboxes);
         inboxAdapter.notifyDataSetChanged();
         rvInbox.setAdapter(inboxAdapter);
-    }
-
-    private void showRecyclerList() {
-//        showLoading(true);
-
-    }
-
-    private void showLoading(Boolean state) {
-        if (state) {
-            progressBar.setVisibility(VISIBLE);
-        } else {
-            progressBar.setVisibility(GONE);
-        }
     }
 }

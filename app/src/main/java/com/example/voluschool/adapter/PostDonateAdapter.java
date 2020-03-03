@@ -17,7 +17,7 @@ import com.example.voluschool.model.PostDonation;
 import java.util.ArrayList;
 
 public class PostDonateAdapter extends RecyclerView.Adapter<PostDonateAdapter.DonateCardViewHolder> {
-    private ArrayList<PostDonation> listPostDonation = new ArrayList<>();
+    private ArrayList<PostDonation> listPostDonation;
     private OnItemClickCallback onItemClickCallback;
 
     public PostDonateAdapter(ArrayList<PostDonation> listPostDonation) {
@@ -39,12 +39,7 @@ public class PostDonateAdapter extends RecyclerView.Adapter<PostDonateAdapter.Do
     public void onBindViewHolder(@NonNull final PostDonateAdapter.DonateCardViewHolder holder, final int position) {
         holder.bind(listPostDonation.get(position));
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onItemClickCallback.onItemClicked(listPostDonation.get(holder.getAdapterPosition()));
-            }
-        });
+        holder.itemView.setOnClickListener(v -> onItemClickCallback.onItemClicked(listPostDonation.get(holder.getAdapterPosition())));
     }
 
     @Override
@@ -52,10 +47,11 @@ public class PostDonateAdapter extends RecyclerView.Adapter<PostDonateAdapter.Do
         return listPostDonation.size();
     }
 
-    public class DonateCardViewHolder extends RecyclerView.ViewHolder {
+    class DonateCardViewHolder extends RecyclerView.ViewHolder {
         TextView tvSchool, tvTerkumpul, tvCost, tvTotal, tvPenuh;
         ImageView ivSchool;
-        public DonateCardViewHolder(@NonNull View itemView) {
+
+        DonateCardViewHolder(@NonNull View itemView) {
             super(itemView);
             tvSchool = itemView.findViewById(R.id.tv_school_donate);
             tvTerkumpul = itemView.findViewById(R.id.tv_saved);

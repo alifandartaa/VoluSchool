@@ -178,7 +178,6 @@
         tools:targetApi="o">
 
         <TextView
-            android:id="@+id/tv_detail_fasilitas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"

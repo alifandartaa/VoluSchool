@@ -8,7 +8,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
 
         <ImageView
             android:id="@+id/profile_image"
@@ -16,7 +17,8 @@
             android:layout_height="200dp"
             android:layout_marginTop="60dp"
             android:src="@drawable/img_bcc_filkom"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/image_profile_user" />
 
         <TextView
             android:id="@+id/tv_profil_nama"
@@ -36,7 +38,6 @@
             android:background="#c0c0c0"/>
 
         <TextView
-            android:id="@+id/tv_value_nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -76,7 +77,8 @@
             android:gravity="right"
             android:layout_below="@id/line_0"
             android:layout_alignParentEnd="true"
-            android:layout_toEndOf="@id/tv_profil_hp"/>
+            android:layout_toEndOf="@id/tv_profil_hp"
+            tools:ignore="RtlHardcoded" />
 
         <TextView
             android:id="@+id/tv_no_ktp"
@@ -100,10 +102,9 @@
             android:layout_below="@id/line_1"
             android:layout_alignParentEnd="true"
             android:layout_toEndOf="@id/tv_profil_hp"
-            />
+            tools:ignore="RtlHardcoded" />
 
         <View
-            android:id="@+id/line_2"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_marginTop="8dp"
@@ -115,7 +116,7 @@
             android:background="@drawable/bg_btn_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="20dp"
             android:text="@string/keluar"
             android:textSize="16sp"
             android:fontFamily="@font/montserrat"

@@ -1,7 +1,5 @@
 package com.example.voluschool.model;
 
-import java.util.Date;
-
 public class Inbox {
     private String message;
 
@@ -13,7 +11,4 @@ public class Inbox {
         return message;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
 }

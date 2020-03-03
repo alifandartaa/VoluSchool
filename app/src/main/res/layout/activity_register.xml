@@ -10,7 +10,6 @@
 
 
     <TextView
-        android:id="@+id/tv_title_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -28,7 +27,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_marginBottom="40dp"
-        app:cardCornerRadius="40dp">
+        app:cardCornerRadius="20dp">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -38,10 +37,9 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/tv_nama_lengkap_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -61,7 +59,6 @@
                 tools:targetApi="o" />
 
             <TextView
-                android:id="@+id/tv_email_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -81,7 +78,6 @@
                 tools:targetApi="o" />
 
             <TextView
-                android:id="@+id/tv_password_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -111,7 +107,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
             <TextView
-                android:id="@+id/tv_conpass_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/confirm_password"
@@ -140,7 +135,6 @@
         </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/tv_nohp_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nomor_hp"
@@ -159,7 +153,6 @@
                 tools:targetApi="o" />
 
             <TextView
-                android:id="@+id/tv_noktp_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -206,6 +199,7 @@
             android:scaleType="centerCrop"
             android:layout_marginHorizontal="24dp"
             android:background="@color/primaryOrange"
+            android:contentDescription="@string/image_ktp_daftar"
             tools:targetApi="o" />
 
     <Button

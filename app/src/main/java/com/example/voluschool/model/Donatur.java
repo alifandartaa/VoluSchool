@@ -10,7 +10,7 @@ public class Donatur implements Parcelable {
     private String date;
 
 
-    protected Donatur(Parcel in) {
+    private Donatur(Parcel in) {
         id = in.readString();
         nama = in.readString();
         donationCost = in.readInt();
@@ -61,23 +61,12 @@ public class Donatur implements Parcelable {
         return nama;
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
-    }
-
     public int getDonationCost() {
         return donationCost;
-    }
-
-    public void setDonationCost(int donationCost) {
-        this.donationCost = donationCost;
     }
 
     public String getDate() {
         return date;
     }
 
-    public void setDate(String date) {
-        this.date = date;
-    }
 }

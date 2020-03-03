@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,7 +8,6 @@
     tools:context=".activities.FormDonasiActivity">
 
     <TextView
-        android:id="@+id/tv_nama_lengkap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nama_lengkap"
@@ -18,15 +16,14 @@
         android:textSize="16sp"/>
 
     <EditText
-        android:id="@+id/et_nama_lengkap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:inputType="text"
-        />
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
 
     <TextView
-        android:id="@+id/tv_pekerjaan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/pekerjaan"
@@ -35,34 +32,32 @@
         android:textSize="16sp"/>
 
     <EditText
-        android:id="@+id/et_pekerjaan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:inputType="text"
-        />
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
 
     <TextView
-        android:id="@+id/tv_pengalaman"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pengalaman"
+        android:text="@string/pengalaman"
         android:layout_marginTop="8dp"
         android:textColor="@color/primaryOrange"
         android:textSize="16sp"/>
 
     <EditText
-        android:id="@+id/et_pengalaman"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="top"
         android:lines="3"
         android:inputType="textMultiLine"
-        />
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
 
     <Button
-        android:id="@+id/btn_upload_cv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"

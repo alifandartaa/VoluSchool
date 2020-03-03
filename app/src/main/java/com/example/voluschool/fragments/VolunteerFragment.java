@@ -3,6 +3,10 @@ package com.example.voluschool.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -10,20 +14,13 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ProgressBar;
-
 import com.example.voluschool.R;
-import com.example.voluschool.activities.DetailDonationActivity;
 import com.example.voluschool.activities.DetailVolunteerActivity;
 import com.example.voluschool.adapter.PostVolunteerAdapter;
 import com.example.voluschool.model.PostVolunteer;
 
 import java.util.ArrayList;
 
-import static com.example.voluschool.activities.DetailDonationActivity.EXTRA_DONATION;
 import static com.example.voluschool.activities.DetailVolunteerActivity.EXTRA_VOLUNTEER;
 
 /**
@@ -49,19 +46,7 @@ public class VolunteerFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-//        progressBar = view.findViewById(R.id.pb_donate);
         RecyclerView rvVolunteer = view.findViewById(R.id.rv_volunteer);
-
-//        private int id;
-//        private String schoolName;
-//        private int registeredPeople;
-//        private int totalPeople;
-//        private String story;
-//        private String location;
-//        private String criteria;
-//        private String company;
-//        private int schoolImage;
 
         PostVolunteer postVolunteer1 = new PostVolunteer("SD Tulusayu", 10, 10, "Tenaga kerja guru di sekolah ini sangatlah minim. Hal tersebut dikarenakan kurang akses untuk menuju tempat tersebut sangat sulit",
                 getResources().getString(R.string.example_detvol_lokasi), "Jago Nge pool","BCC", R.drawable.img_sd_tulusayu );
@@ -78,12 +63,7 @@ public class VolunteerFragment extends Fragment {
         PostVolunteerAdapter postVolunteerAdapter = new PostVolunteerAdapter(postVolunteers);
         postVolunteerAdapter.notifyDataSetChanged();
         rvVolunteer.setAdapter(postVolunteerAdapter);
-        postVolunteerAdapter.setOnItemClickCallback(new PostVolunteerAdapter.OnItemClickCallback() {
-            @Override
-            public void onItemClicked(PostVolunteer data) {
-                showSelectedData(data);
-            }
-        });
+        postVolunteerAdapter.setOnItemClickCallback(data -> showSelectedData(data));
     }
 
     private void showSelectedData(PostVolunteer postVolunteer) {

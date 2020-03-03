@@ -5,7 +5,6 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/cv_donate"
     card_view:layout_goneMarginEnd="4dp"
     card_view:layout_goneMarginBottom="4dp"
     card_view:layout_goneMarginTop="4dp"
@@ -85,7 +84,6 @@
             android:text="@string/tv_value_rp" />
 
         <TextView
-            android:id="@+id/tv_total"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/target_total"

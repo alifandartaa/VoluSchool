@@ -12,13 +12,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.voluschool.R;
-import com.example.voluschool.model.PostDonation;
 import com.example.voluschool.model.PostVolunteer;
 
 import java.util.ArrayList;
 
 public class PostVolunteerAdapter extends RecyclerView.Adapter<PostVolunteerAdapter.VolunteerCardViewHolder> {
-    private ArrayList<PostVolunteer> listPostVolunteer = new ArrayList<>();
+    private ArrayList<PostVolunteer> listPostVolunteer;
     private OnItemClickCallback onItemClickCallback;
 
     public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
@@ -40,12 +39,7 @@ public class PostVolunteerAdapter extends RecyclerView.Adapter<PostVolunteerAdap
     public void onBindViewHolder(@NonNull final PostVolunteerAdapter.VolunteerCardViewHolder holder, int position) {
         holder.bind(listPostVolunteer.get(position));
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onItemClickCallback.onItemClicked(listPostVolunteer.get(holder.getAdapterPosition()));
-            }
-        });
+        holder.itemView.setOnClickListener(v -> onItemClickCallback.onItemClicked(listPostVolunteer.get(holder.getAdapterPosition())));
     }
 
     @Override
@@ -53,18 +47,18 @@ public class PostVolunteerAdapter extends RecyclerView.Adapter<PostVolunteerAdap
         return listPostVolunteer.size();
     }
 
-    public class VolunteerCardViewHolder extends RecyclerView.ViewHolder {
+    class VolunteerCardViewHolder extends RecyclerView.ViewHolder {
         TextView tvSchool, tvPenuh;
         ImageView ivSchool;
 
-        public VolunteerCardViewHolder(@NonNull View itemView) {
+        VolunteerCardViewHolder(@NonNull View itemView) {
             super(itemView);
             tvSchool = itemView.findViewById(R.id.tv_school_volunteer);
             ivSchool = itemView.findViewById(R.id.iv_img_volunteer);
             tvPenuh = itemView.findViewById(R.id.tv_volu_penuh);
         }
 
-        public void bind(PostVolunteer postVolunteer) {
+        void bind(PostVolunteer postVolunteer) {
             tvSchool.setText(postVolunteer.getSchoolName());
             if(postVolunteer.getRegisteredPeople() == postVolunteer.getTotalPeople()){
                 tvPenuh.setVisibility(View.VISIBLE);

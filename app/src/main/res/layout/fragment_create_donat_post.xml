@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/fg_create_donate"
     android:padding="16dp"
     tools:context=".fragments.CreateDonatPostFragment">
 
@@ -18,7 +17,6 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/tv_crname_school"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/nama_sekolah"
@@ -30,10 +28,11 @@
             android:id="@+id/et_crname_school"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"/>
+            android:importantForAutofill="no"
+            android:inputType="text"
+            tools:ignore="Autofill,LabelFor" />
 
         <TextView
-            android:id="@+id/tv_crdesc_school"
             android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,10 +48,11 @@
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:gravity="top"
-            android:scrollbars="vertical"/>
+            android:importantForAutofill="no"
+            android:scrollbars="vertical"
+            tools:ignore="Autofill,LabelFor" />
 
         <TextView
-            android:id="@+id/tv_crfac_school"
             android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -67,16 +67,16 @@
             android:layout_height="wrap_content"
             android:gravity="top"
             android:inputType="textMultiLine"
-            android:lines="2" />
+            android:importantForAutofill="no"
+            android:lines="2"
+            tools:ignore="Autofill,LabelFor" />
 
         <TextView
-            android:id="@+id/tv_crcost_school"
             android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/target_dana"
             android:textColor="@color/primaryOrange"
-            android:inputType="number"
             android:fontFamily="@font/montserrat"
             android:textSize="18sp"/>
 
@@ -84,7 +84,9 @@
             android:id="@+id/et_crcost_school"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"/>
+            android:importantForAutofill="no"
+            android:inputType="number"
+            tools:ignore="Autofill,LabelFor" />
 
         <Button
             android:id="@+id/btn_upimg_don"
@@ -104,7 +106,8 @@
             android:layout_height="200dp"
             android:layout_marginTop="24dp"
             android:scaleType="centerCrop"
-            android:src="@color/primaryOrange"/>
+            android:contentDescription="@string/image_school_create_post"
+            android:src="@color/primaryOrange" />
 
         <Button
             android:id="@+id/btn_create_donat"

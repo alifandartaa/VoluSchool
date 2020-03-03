@@ -1,9 +1,5 @@
 package com.example.voluschool.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,23 +8,24 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.bumptech.glide.Glide;
 import com.example.voluschool.R;
-import com.example.voluschool.fragments.DonateFragment;
 import com.example.voluschool.fragments.DonaturFragment;
-import com.example.voluschool.fragments.VolunteerFragment;
 import com.example.voluschool.model.PostDonation;
+
+import java.util.Objects;
 
 public class DetailDonationActivity extends AppCompatActivity {
 
     public static final String EXTRA_DONATION = "extra_donation";
-    private Intent intent;
     private PostDonation postDonation;
     private TextView tvDetSchool, tvDetCost, tvDetTotal, tvCompany, tvStory, tvDonPenuh;
     private ImageView ivDetSchool;
     private Button btnDonate;
-    private FragmentManager fragmentManager;
-    private FragmentTransaction fragmentTransaction;
 
 
     @Override
@@ -36,8 +33,8 @@ public class DetailDonationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_donation);
 
-        fragmentManager = getSupportFragmentManager();
-        fragmentTransaction = fragmentManager.beginTransaction();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         DonaturFragment donaturFragment = new DonaturFragment();
         fragmentTransaction.replace(R.id.fg_donatur, donaturFragment);
@@ -45,10 +42,10 @@ public class DetailDonationActivity extends AppCompatActivity {
 
         init();
 //        getSupportActionBar().hide();
-        getSupportActionBar().setTitle(getResources().getString(R.string.detail_sekolah));
-        intent = getIntent();
+        Objects.requireNonNull(getSupportActionBar()).setTitle(getResources().getString(R.string.detail_sekolah));
+        Intent intent = getIntent();
         postDonation = intent.getParcelableExtra(EXTRA_DONATION);
-        tvDetSchool.setText(postDonation.getSchoolName());
+        tvDetSchool.setText(Objects.requireNonNull(postDonation).getSchoolName());
         if(postDonation.getDonationCost() == postDonation.getTotalCost()){
             tvDonPenuh.setVisibility(View.VISIBLE);
         }
@@ -60,15 +57,12 @@ public class DetailDonationActivity extends AppCompatActivity {
                 .load(postDonation.getSchoolImage())
                 .into(ivDetSchool);
 
-        btnDonate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(postDonation.getDonationCost() == postDonation.getTotalCost()){
-                    Toast.makeText(DetailDonationActivity.this, getString(R.string.string_penuh), Toast.LENGTH_SHORT).show();
-                }else{
-                    Intent intent = new Intent(DetailDonationActivity.this, FormDonasiActivity.class);
-                    startActivity(intent);
-                }
+        btnDonate.setOnClickListener(v -> {
+            if (postDonation.getDonationCost() == postDonation.getTotalCost()) {
+                Toast.makeText(DetailDonationActivity.this, getString(R.string.string_penuh), Toast.LENGTH_SHORT).show();
+            } else {
+                Intent intent1 = new Intent(DetailDonationActivity.this, FormDonasiActivity.class);
+                startActivity(intent1);
             }
         });
     }

@@ -13,10 +13,9 @@
         android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tv_title_detailapp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Apa itu Voluschool"
+        android:text="@string/apa_itu_voluschool"
         android:layout_gravity="center_horizontal"
         android:textColor="@color/colorBlack"
         android:fontFamily="@font/montserrat"
@@ -24,7 +23,6 @@
         android:textSize="18sp"/>
 
     <TextView
-        android:id="@+id/tv_descrip_detailapp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="start"
@@ -34,7 +32,6 @@
         android:text="@string/example_detail_app"/>
 
     <TextView
-        android:id="@+id/tv_fun_app"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
@@ -43,10 +40,9 @@
         android:layout_marginTop="36dp"
         android:fontFamily="@font/montserrat"
         android:textStyle="bold"
-        android:text="Voluschool untuk apa aja?"/>
+        android:text="@string/voluschool_untuk_apa_aja" />
 
     <GridLayout
-        android:id="@+id/gl_feature_detail"
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:padding="16dp"
@@ -60,15 +56,14 @@
             android:layout_row="0"
             app:cardCornerRadius="8dp">
             <ImageView
-                android:id="@+id/iv_img_fit1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/img_fit1"/>
+                android:contentDescription="@string/image_fitur_1"
+                android:src="@drawable/img_fit1" />
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/tv_fit1"
             android:layout_column="1"
             android:layout_row="0"
             android:layout_width="200dp"
@@ -87,15 +82,14 @@
             android:layout_marginTop="16dp"
             app:cardCornerRadius="8dp">
             <ImageView
-                android:id="@+id/iv_img_fit2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/img_fit2"/>
+                android:contentDescription="@string/image_fitur_2"
+                android:src="@drawable/img_fit2" />
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/tv_fit2"
             android:layout_row="1"
             android:layout_column="1"
             android:layout_width="200dp"
@@ -114,15 +108,14 @@
             android:layout_marginTop="16dp"
             app:cardCornerRadius="8dp">
             <ImageView
-                android:id="@+id/iv_img_fit3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/img_fit3"/>
+                android:contentDescription="@string/image_fitur_2"
+                android:src="@drawable/img_fit3" />
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/tv_fit3"
             android:layout_row="2"
             android:layout_column="1"
             android:layout_width="230dp"
@@ -141,15 +134,14 @@
             android:layout_marginTop="16dp"
             app:cardCornerRadius="8dp">
             <ImageView
-                android:id="@+id/iv_img_fit4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/img_fit4"/>
+                android:contentDescription="@string/image_fitur_3"
+                android:src="@drawable/img_fit4" />
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/tv_fit4"
             android:layout_row="3"
             android:layout_column="1"
             android:layout_width="230dp"
