@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 public class DonationViewModel extends ViewModel {
     MyApi myApi;
+    int test = 0;
     private MutableLiveData<ArrayList<PostDonation>> listPostDonation = new MutableLiveData<>();
 
     public DonationViewModel(){
